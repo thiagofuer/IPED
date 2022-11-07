@@ -190,7 +190,7 @@ public class ConfigPanel extends DefaultPanel {
         textFieldTskJarPath.setText( (pluginConfig.getTskJarFile() != null )? pluginConfig.getTskJarFile().getAbsolutePath() : "" );
         textFieldPluginFolder.setText( (pluginConfig.getPluginFolder() != null )? pluginConfig.getPluginFolder().getPath() : "" );
         //FIXME Waiting issue #1320
-        textFieldMplayerPath.setText( localConfig.getMplayerWinPath() );
+        //textFieldMplayerPath.setText( localConfig.getMplayerWinPath() );
         //FIXME Waiting issue #331
         textFieldRegripperFolder.setText( "" );
 
