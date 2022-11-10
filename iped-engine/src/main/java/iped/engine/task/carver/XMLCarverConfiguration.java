@@ -35,6 +35,7 @@ public class XMLCarverConfiguration implements CarverConfiguration, Serializable
 
     private static AhoCorasick tree = null;
     private static String CARVE_DIR_INDIVIDUAIS = "carvers";
+    Document doc = null;
 
     private boolean ignoreCorrupted = true;
     protected HashSet<MediaType> TYPES_TO_PROCESS;
@@ -43,7 +44,6 @@ public class XMLCarverConfiguration implements CarverConfiguration, Serializable
     private ArrayList<CarverType> carverTypesArray = new ArrayList<CarverType>();
 
     public void loadXMLConfigFile(File confFile) throws IOException {
-        Document doc = null;
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             dbf.setNamespaceAware(false);
@@ -290,6 +290,10 @@ public class XMLCarverConfiguration implements CarverConfiguration, Serializable
 
     public boolean isToIgnoreCorrupted() {
         return this.ignoreCorrupted;
+    }
+
+    public String getXMLString() {
+        return doc.toString();        
     }
 
 }

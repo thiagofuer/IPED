@@ -97,6 +97,7 @@ public class Category implements Serializable, Comparable<Category> {
 
     @Override
     public boolean equals(Object o) {
+        if(!(o instanceof Category)) return false;
         return compareTo((Category) o) == 0;
     }
 
